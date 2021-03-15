@@ -2,6 +2,7 @@ package usecases
 
 import (
 	"os"
+	"strings"
 	"sync"
 
 	dom "github.com/cydside/cff/src/domain"
@@ -27,6 +28,10 @@ func (p *CheckFolderImp) CheckFolder(obj *dom.TargetFolder) ([]string, error) {
 		return nil, err
 	}
 
+	if obj.IgnoreHiddenFiles {
+		return p.removeHiddenFiles(files), nil
+	}
+
 	return files, nil
 }
 
@@ -45,4 +50,23 @@ func (p *CheckFolderImp) checkPoint(obj *dom.TargetFolder) error {
 	}
 
 	return nil
+}
+
+//______________________________________________________________________________
+
+// removeHiddenFiles rimuove i file nascosti
+func (p *CheckFolderImp) removeHiddenFiles(files []string) []string {
+	var mu sync.Mutex
+	var r []string
+
+	mu.Lock()
+	defer mu.Unlock()
+
+	for _, v := range files {
+		if !strings.Contains(v, string(os.PathSeparator)+".") {
+			r = append(r, v)
+		}
+	}
+
+	return r
 }

@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	sup "github.com/cydside/cff/src/infrastructure"
+	dbg "github.com/fatih/color"
 )
 
 //______________________________________________________________________________
@@ -19,5 +20,9 @@ func TestBoot(t *testing.T) {
 // TestBoot
 // go test -v -run ^TestCFIF$
 func TestCFIF(t *testing.T) {
-	CheckFilesInFolder()
+	files := CheckFilesInFolder()
+
+	for _, v := range files {
+		dbg.Cyan("%s\n", v)
+	}
 }

@@ -4,6 +4,7 @@ package domain
 
 // TargetFolder configuration
 type TargetFolder struct {
-	AbsPath         string `json:"AbsPath"`
-	CheckSubfolders bool   `json:"CheckSubfolders"`
+	AbsPath           string `json:"AbsPath"`
+	CheckSubfolders   bool   `json:"CheckSubfolders"`
+	IgnoreHiddenFiles bool   `json:"IgnoreHiddenFiles"`
 }
