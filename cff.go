@@ -27,11 +27,11 @@ type Cff struct {
 
 // FolderOptions
 type FolderOptions struct {
-	AbsPath           string `json:"AbsPath"`
-	CheckSubfolders   bool   `json:"CheckSubfolders"`
-	IgnoreHiddenFiles bool   `json:"IgnoreHiddenFiles"`
-	IntervalCheck     int    `json:"IntervalCheck"`
-	CallbackFunction  func(list []string)
+	AbsPath           string              `json:"AbsPath"`
+	CheckSubfolders   bool                `json:"CheckSubfolders"`
+	IgnoreHiddenFiles bool                `json:"IgnoreHiddenFiles"`
+	IntervalCheck     int                 `json:"IntervalCheck"`
+	CallbackFunction  func(list []string) `json:"-"`
 }
 
 //______________________________________________________________________________
