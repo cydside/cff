@@ -4,29 +4,7 @@ import (
 	"fmt"
 	"testing"
 	"time"
-
-	sup "github.com/cydside/cff/src/infrastructure"
 )
-
-//______________________________________________________________________________
-
-// TestBoot
-// go test -v -run ^TestBoot$
-func TestBoot(t *testing.T) {
-	sup.Boot()
-}
-
-//______________________________________________________________________________
-
-// TestBoot
-// go test -v -run ^TestCFIF$
-// func TestCFIF(t *testing.T) {
-// 	files := CheckFilesInFolder()
-
-// 	for _, v := range files {
-// 		dbg.Cyan("%s\n", v)
-// 	}
-// }
 
 //______________________________________________________________________________
 
@@ -63,8 +41,6 @@ func TestCff(t *testing.T) {
 
 	h := New().AddFolder(f1).AddFolder(f2)
 	h.Run()
-	fmt.Println("_------------------------------")
 	time.Sleep(11 * time.Second)
-
 	h.Stop()
 }
