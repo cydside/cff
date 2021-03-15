@@ -1,11 +1,11 @@
 {
 	"Folders": [
 		{
-			"AbsPath": "github.com/cydside/cff/testfolders/a/ah",
+			"AbsPath": "testfolders/a/ah",
 			"CheckSubfolders": false
 		},
 		{
-			"AbsPath": "github.com/cydside/cff/testfolders",
+			"AbsPath": "testfolders",
 			"CheckSubfolders": true
 		}
 	]
