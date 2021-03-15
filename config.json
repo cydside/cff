@@ -1,11 +1,11 @@
 {
 	"Folders": [
 		{
-			"AbsPath": "/home/thenull/Sviluppo/cff/materiale/a/ah",
+			"AbsPath": "github.com/cydside/cff/testfolders/a/ah",
 			"CheckSubfolders": false
 		},
 		{
-			"AbsPath": "/home/thenull/Sviluppo/cff/materiale",
+			"AbsPath": "github.com/cydside/cff/testfolders",
 			"CheckSubfolders": true
 		}
 	]
