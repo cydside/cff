@@ -12,7 +12,7 @@ import (
 // go test -v -run ^TestCff$
 func TestCff(t *testing.T) {
 	f1 := &FolderOptions{
-		AbsPath:           "testfolders/a/ahb",
+		AbsPath:           "testfolders/a/ah",
 		CheckSubfolders:   false,
 		IgnoreHiddenFiles: true,
 		IntervalCheck:     5,
@@ -33,7 +33,7 @@ func TestCff(t *testing.T) {
 		AbsPath:           "testfolders",
 		CheckSubfolders:   true,
 		IgnoreHiddenFiles: false,
-		IntervalCheck:     2,
+		IntervalCheck:     8,
 		CallbackFunction: func(list []string) {
 			f1s := []string{
 				"testfolders/a/ah/.ah_02.txt",

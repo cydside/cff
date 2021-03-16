@@ -1,6 +1,7 @@
 package cff
 
 import (
+	"errors"
 	"io/ioutil"
 	"log"
 	"os"
@@ -112,6 +113,10 @@ func (p *Cff) checkPoint(obj *FolderOptions) error {
 
 	if _, err = os.Stat(obj.AbsPath); os.IsNotExist(err) {
 		return err
+	}
+
+	if obj.IntervalCheck < 5 {
+		return errors.New("Interval cannot be < 5 secs")
 	}
 
 	return nil
