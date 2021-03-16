@@ -3,7 +3,7 @@ A Golang Check Files in Folder package. It provides options to search or not in 
 
 ## Usage examples:
 
-```
+```go
 	f1 := &FolderOptions{
 		AbsPath:           "testfolders/a/ah",
 		CheckSubfolders:   false,
