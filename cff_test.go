@@ -12,7 +12,7 @@ import (
 // go test -v -run ^TestCff$
 func TestCff(t *testing.T) {
 	f1 := &FolderOptions{
-		AbsPath:           "testfolders/a/ah",
+		AbsPath:           "testfolders/a/ahb",
 		CheckSubfolders:   false,
 		IgnoreHiddenFiles: true,
 		IntervalCheck:     5,

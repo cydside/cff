@@ -2,6 +2,7 @@ package cff
 
 import (
 	"io/ioutil"
+	"log"
 	"os"
 	"path/filepath"
 	"sort"
@@ -82,14 +83,15 @@ func (p *Cff) schedule(obj *FolderOptions, done <-chan bool) *time.Ticker {
 			select {
 			case <-ticker.C:
 				if err := p.checkPoint(obj); err != nil {
+					log.Printf("%s\n", err)
 					return
 				}
 				if files, err := p.checkFolder(obj); err != nil {
+					log.Printf("%s\n", err)
 					return
 				} else {
 					obj.CallbackFunction(files)
 				}
-
 			case <-done:
 				return
 			}
