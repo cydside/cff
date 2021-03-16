@@ -37,3 +37,5 @@ A Golang Check Files in Folder package. It provides options to search or not in 
 	time.Sleep(11 * time.Second)
 	h.Stop()
 ```
+
+Feel free to suggest improvements.

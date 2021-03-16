@@ -8,7 +8,7 @@ import (
 
 //______________________________________________________________________________
 
-// TestBoot
+// TestCff
 // go test -v -run ^TestCff$
 func TestCff(t *testing.T) {
 	f1 := &FolderOptions{
