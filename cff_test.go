@@ -18,7 +18,7 @@ func TestCff(t *testing.T) {
 		IntervalCheck:     5,
 		CallbackFunction: func(list []string) {
 			f1s := []string{"testfolders/a/ah/ah_01.txt"}
-			fmt.Println("f1 found:")
+			fmt.Println("f1 has found:")
 			for _, v := range list {
 				fmt.Printf("%s\n", v)
 			}
@@ -44,7 +44,7 @@ func TestCff(t *testing.T) {
 				"testfolders/b/boh/boh_02.txt",
 				"testfolders/b/boh/boh_03.txt",
 			}
-			fmt.Println("f2 found:")
+			fmt.Println("f2 has found:")
 			for _, v := range list {
 				fmt.Printf("%s\n", v)
 			}
