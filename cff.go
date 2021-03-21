@@ -167,7 +167,8 @@ func (p *Cff) getFilesInFolder(absolutePath string) ([]string, error) {
 
 	for _, f := range objs {
 		if !f.IsDir() {
-			files = append(files, absolutePath+string(os.PathSeparator)+f.Name())
+			// files = append(files, absolutePath+string(os.PathSeparator)+f.Name())
+			files = append(files, f.Name())
 		}
 	}
 
