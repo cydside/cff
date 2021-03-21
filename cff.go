@@ -210,7 +210,7 @@ func (p *Cff) removeHiddenFiles(files []string) []string {
 	defer mu.Unlock()
 
 	for _, v := range files {
-		if !strings.Contains(v, string(os.PathSeparator)+".") {
+		if !strings.Contains(v, string(os.PathSeparator)+".") && !strings.HasPrefix(v, ".") {
 			r = append(r, v)
 		}
 	}

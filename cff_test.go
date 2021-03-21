@@ -17,7 +17,7 @@ func TestCff(t *testing.T) {
 		IgnoreHiddenFiles: true,
 		IntervalCheck:     5,
 		CallbackFunction: func(list []string) {
-			f1s := []string{"testfolders/a/ah/ah_01.txt"}
+			f1s := []string{"ah_01.txt"}
 			fmt.Println("f1 has found:")
 			for _, v := range list {
 				fmt.Printf("%s\n", v)
